@@ -36,3 +36,6 @@ li a:hover {
 i:hover {
   color: rgb(130, 130, 211);
 }
+.ham {
+  float: right;
+}
