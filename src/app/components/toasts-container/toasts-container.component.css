@@ -1,0 +1,18 @@
+:host {
+  position: fixed;
+  top: auto;
+  bottom: 75vh;
+  right: auto;
+  left: 70vw;
+  margin: 0.5em;
+  z-index: 1200;
+}
+@media screen and (max-width: 900px) {
+  :host {
+    left: 12vw;
+    bottom: 90vh;
+  }
+}
+.bg-jet {
+  background-color: black;
+}

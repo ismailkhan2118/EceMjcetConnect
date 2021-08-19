@@ -1,0 +1,47 @@
+<app-loader *ngIf="isLoading || !isDataReady"></app-loader>
+<div class="post" *ngIf="isDataReady">
+  <div class="post__question">
+    <i class="far fa-question-circle fa-3x"></i>
+    {{ selectedQues }}
+    <div *ngIf="isLoggedIn" class="give__answer">
+      <a class="btn btn-vix" [routerLink]="['answer']"
+        >Give Answer <i class="fas fa-pen"></i
+      ></a>
+    </div>
+  </div>
+  <div class="ans__list">
+    <div *ngFor="let ans of answers" class="post__answer">
+      <div class="ans__head">
+        <div class="img">
+          <img class="prof__photo" [src]="ans.photoUrl" alt="" />
+        </div>
+        <div class="details">
+          <div class="profile__name">{{ ans.name }}</div>
+          <div class="profile__bio">{{ ans.bio }}</div>
+          <div class="profile__grad">Graduated - {{ ans.gradYear }}</div>
+        </div>
+      </div>
+      <div class="ans__body">
+        <div class="profile__time">Answered - {{ ans.answeredOn }}</div>
+        {{ ans.answer }}
+        <div *ngIf="userId && userId == ans.docid">
+          <button
+            (click)="deleteAnswer()"
+            type="button"
+            class="btn btn-danger btn-sm dltq"
+          >
+            <i class="far fa-trash-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button
+      *ngIf="loadMoreBtn"
+      class="btn btn-vix"
+      type="button"
+      (click)="onLoadMore()"
+    >
+      Load More
+    </button>
+  </div>
+</div>

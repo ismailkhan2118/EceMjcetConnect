@@ -1,0 +1,15 @@
+.conatiner {
+  font-family: "Raleway";
+}
+.btn-vix {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+label {
+  font-weight: 800;
+}
+.msg {
+  font-style: italic;
+  font-size: 14px;
+}

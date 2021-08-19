@@ -1,0 +1,28 @@
+<app-loader *ngIf="isLoading || !isDataReady"></app-loader>
+
+<div *ngIf="isDataReady" class="posts__board">
+  <h1 class="heading">Answered Questions</h1>
+  <div *ngFor="let post of posts" class="post__card">
+    <div class="post__question" (click)="viewQues(post.docid)">
+      <a class="question__tag">
+        <i class="far fa-question-circle fa-3x"></i>
+        {{ post.question }}
+      </a>
+    </div>
+    <!-- <div><a [routerLink]="['question', post.docid]">View Answers</a></div> -->
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="noData">
+    No Data Available
+  </div>
+  <button
+    class="btn btn-vix"
+    *ngIf="loadMoreBtn"
+    type="button"
+    (click)="loadMore()"
+  >
+    Load More
+  </button>
+</div>
+<!-- <button type="button" (click)="ans()">get first 2</button>
+<button type="button" (click)="post()">post</button>
+<button type="button" (click)="fetchnext()">get next 2</button> -->

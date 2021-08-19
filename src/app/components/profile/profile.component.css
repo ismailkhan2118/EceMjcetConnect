@@ -1,0 +1,48 @@
+.form {
+  padding-top: 8%;
+}
+.form__head {
+  text-align: center;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.validation__msg {
+  color: red;
+  font-size: 12px;
+}
+.comp__content {
+  font-family: "Raleway";
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-weight: 800;
+}
+.btn-save {
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border-style: none;
+  width: 25%;
+}
+.prof__div {
+  margin: 1em;
+  text-align: center;
+}
+.prof__photo {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center right;
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+
+i:hover {
+  color: rgb(130, 130, 211);
+}

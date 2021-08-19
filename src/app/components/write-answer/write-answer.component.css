@@ -1,0 +1,20 @@
+.container {
+  font-family: "Raleway";
+}
+.question {
+  text-align: center;
+  font-weight: 600;
+  margin: 2em;
+}
+.btn-vix {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+label {
+  font-weight: 800;
+}
+.msg {
+  font-style: italic;
+  font-size: 14px;
+}

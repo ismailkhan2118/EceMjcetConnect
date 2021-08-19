@@ -1,0 +1,23 @@
+<app-toasts-container
+  aria-live="polite"
+  aria-atomic="true"
+></app-toasts-container>
+<app-loader *ngIf="isLoading"></app-loader>
+<form [formGroup]="quesForm" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label class="form-label" for="ans">Ask Question</label>
+    <textarea
+      placeholder="Type your Question here.."
+      class="form-control"
+      id="ans"
+      cols="30"
+      rows="10"
+      formControlName="ques"
+      maxlength="2000"
+    ></textarea>
+    <p class="msg">Question should be atleast 10 characters long</p>
+    <button [disabled]="!quesForm.valid" type="submit" class="btn btn-vix">
+      submit
+    </button>
+  </div>
+</form>

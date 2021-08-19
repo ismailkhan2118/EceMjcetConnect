@@ -1,0 +1,19 @@
+<div class="auth">
+  <div *ngIf="errMsg != ''" class="alert alert-danger" role="alert">
+    {{ errMsg }}
+  </div>
+  <h2 class="heading">
+    Sign in to ECEMJCETCONNECT<i class="fab fa-connectdevelop fa-2x"></i>
+  </h2>
+  <div class="g-sign-in-button" (click)="onSubmit()">
+    <div class="content-wrapper">
+      <div class="logo-wrapper">
+        <img src="../../../assets/g-logo.png" alt="G" />
+      </div>
+      <span class="text-container">
+        <span>Sign in with Google</span>
+      </span>
+    </div>
+  </div>
+  <a class="continue" [routerLink]="['']">Continue without Sign in</a>
+</div>

@@ -1,0 +1,48 @@
+.post__card {
+  margin: 1rem 1rem 1rem 1rem;
+  width: 70%;
+  align-self: center;
+}
+.posts__board {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway";
+}
+.heading {
+  text-align: center;
+  font-weight: 600;
+}
+.btn-vix {
+  background-color: black;
+  color: white;
+  width: 10em;
+  align-self: center;
+  font-weight: 600;
+  font-style: bold;
+  border-radius: 25px;
+  padding: 10px;
+}
+.post__question {
+  padding: 1em;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  border-radius: 6px;
+}
+.post__question:hover {
+  background-color: rgb(248, 248, 248);
+  transform: scale(1.05);
+}
+.btn-vix-light {
+  margin-top: 1em;
+  background-color: rgb(154, 154, 228);
+  font-weight: 400;
+}
+.unanswered {
+  color: lightgray;
+  margin-right: 8px;
+}
+.give__answer {
+  margin: 1em;
+}
+.dltq {
+  float: right;
+}

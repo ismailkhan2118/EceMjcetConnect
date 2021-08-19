@@ -1,0 +1,70 @@
+<app-toasts-container
+  aria-live="polite"
+  aria-atomic="true"
+></app-toasts-container>
+<app-loader *ngIf="isLoading"></app-loader>
+
+<div class="comp__content">
+  <div class="form">
+    <div class="prof__div">
+      <img class="prof__photo" [src]="photoUrl" alt="" />
+    </div>
+    <h2 class="form__head">My Profile</h2>
+    <form *ngIf="profileForm" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          formControlName="name"
+          placeholder="Enter Your Name which will be visible to others"
+        />
+        <p
+          *ngIf="!nameControl?.valid && nameControl?.touched"
+          class="validation__msg"
+        >
+          Please Enter a Name between 4 to 20 characters long
+        </p>
+      </div>
+      <div class="mb-3">
+        <label for="bio" class="form-label">Bio</label>
+        <input
+          type="text"
+          class="form-control"
+          id="bio"
+          formControlName="bio"
+          placeholder="Write a Short Bio of Yourself"
+        />
+        <p
+          *ngIf="!bioControl?.valid && bioControl?.touched"
+          class="validation__msg"
+        >
+          Bio should be between 6 to 50 characters
+        </p>
+      </div>
+      <div class="mb-3">
+        <label for="grad" class="form-label">Graduation Year</label>
+        <input
+          type="month"
+          class="form-control"
+          id="grad"
+          formControlName="grad"
+        />
+        <p
+          *ngIf="!gradControl?.valid && gradControl?.touched"
+          class="validation__msg"
+        >
+          Please Enter Year of Graduation
+        </p>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-save"
+        [disabled]="!profileFormControl.valid || !profileFormControl.dirty"
+      >
+        Save
+      </button>
+    </form>
+  </div>
+</div>

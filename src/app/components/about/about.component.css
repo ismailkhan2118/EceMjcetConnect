@@ -1,0 +1,19 @@
+.about__section {
+  font-family: "Raleway";
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  justify-content: center;
+  row-gap: 1em;
+}
+.ff {
+  align-self: flex-end;
+}
+
+@media (max-width: 650px) {
+  .about__section {
+    font-size: 16px;
+  }
+}

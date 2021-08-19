@@ -1,0 +1,26 @@
+<app-toasts-container
+  aria-live="polite"
+  aria-atomic="true"
+></app-toasts-container>
+<app-loader *ngIf="isLoading"></app-loader>
+<div *ngIf="viewcont" class="question">
+  <i class="far fa-question-circle fa-3x unanswered"></i>{{ question }}
+</div>
+<form [formGroup]="ansForm" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label class="form-label" for="ans">Write Answer</label>
+    <textarea
+      placeholder="Type your Answer here.."
+      class="form-control"
+      id="ans"
+      cols="30"
+      rows="10"
+      formControlName="ans"
+      maxlength="2000"
+    ></textarea>
+    <p class="msg">Answer should be atleast 20 characters long</p>
+    <button [disabled]="!ansForm.valid" type="submit" class="btn btn-vix">
+      submit
+    </button>
+  </div>
+</form>

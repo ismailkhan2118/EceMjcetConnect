@@ -1,0 +1,37 @@
+<app-loader *ngIf="isLoading || !isDataReady"></app-loader>
+
+<div *ngIf="isDataReady" class="posts__board">
+  <h1 class="heading">Unanswered Questions</h1>
+  <div *ngFor="let post of posts" class="post__card">
+    <div class="post__question">
+      <i class="far fa-question-circle fa-3x unanswered"></i>{{ post.question }}
+      <button
+        (click)="deleteQuestion(post.docid)"
+        type="button"
+        *ngIf="userId && userId == post.userid"
+        class="btn btn-danger btn-sm dltq"
+      >
+        <i class="far fa-trash-alt"></i>
+      </button>
+      <div class="give__answer" *ngIf="isLoggedIn">
+        <a
+          class="btn btn-sm btn-vix-light"
+          [routerLink]="['/question', post.docid, 'answer']"
+          >Give Answer<i class="fas fa-pen"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="noData">
+    No Data Available
+  </div>
+
+  <button
+    class="btn btn-vix"
+    *ngIf="loadMoreBtn"
+    type="button"
+    (click)="loadMore()"
+  >
+    Load More...
+  </button>
+</div>

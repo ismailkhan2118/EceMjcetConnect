@@ -1,0 +1,78 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway";
+}
+.post__question {
+  align-self: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+.ans__list {
+  align-self: center;
+  width: 90%;
+}
+.post__answer {
+  padding: 1em;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  border-radius: 6px;
+  margin: 1em;
+}
+.profile__name {
+  font-weight: 600;
+  font-style: bold;
+  font-size: 16px;
+}
+.profile__grad {
+  font-weight: 300;
+  font-size: 12px;
+}
+.profile__bio {
+  font-weight: 300;
+  font-size: 14px;
+  font-style: italic;
+}
+.profile__time {
+  font-size: 14px;
+  font-weight: 100;
+  text-decoration: underline;
+}
+.dltq {
+  width: 2em;
+  padding-right: 20px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.ans__head {
+  display: flex;
+}
+i {
+  margin-right: 8px;
+}
+.btn-vix {
+  background-color: black;
+  color: white;
+  width: 10em;
+  align-self: center;
+  font-weight: 600;
+  font-style: bold;
+  border-radius: 25px;
+  padding: 10px;
+}
+.give__answer {
+  margin: 1em;
+  text-align: center;
+}
+.prof__photo {
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  border: 2=5px solid gray;
+  box-shadow: rgb(0 0 0 / 15%) 2.4px 2.4px 3.2px;
+}
+.img {
+  align-self: center;
+}
