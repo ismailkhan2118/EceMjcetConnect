@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 
-## Deployed project link
+## Deployed Project
 https://ecemjcetconnect.web.app/
 
 ## Development server
